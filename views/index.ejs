@@ -51,9 +51,12 @@
           <h1 class="ps-center">Nuestro Menu</h1>
           <br />
           <% for(let i = 0; i < meals.length; i++) {%> 
-            <h4><%= meals[i].name %> </h4>
+
+            <a href=<%=`/meals/detail/${meals[i].id}` %>>
+              <h4><%= meals[i].name %> </h4>
+            </a>
             <p class="ps-text-grey">
-              <%= `${meals[i].description} ${meals[i].currency} ${meals[i].price}` %>
+              <%= `${meals[i].description || 'Platillo Tipico'} ${meals[i].currency} ${meals[i].price}` %>
             </p>
             <br />
 
